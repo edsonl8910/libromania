@@ -1,0 +1,13 @@
+libromania:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: CMZITIQ-EAC90604
+      user: EDSONL8910
+      password: Colombia202020*
+      role: ACCOUNTADMIN
+      database: LIBROMANIA_DB
+      warehouse: COMPUTE_WH
+      schema: DBT_DEV
+      threads: 4
