@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_books
+    description: Dimensión de libros
+    columns:
+      - name: book_id
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        tests:
+          - not_null

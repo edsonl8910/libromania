@@ -38,3 +38,8 @@ models:
       +schema: stg
       raw:
         +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +materialized: table

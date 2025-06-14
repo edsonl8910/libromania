@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Dimensión de clientes
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: age
+        tests:
+          - not_null
+
+  - name: test_customers_age
+    description: Verifica que no existan clientes menores de edad

@@ -1,0 +1,50 @@
+version: 2
+
+exposures:
+  - name: ventas_dashboard
+    label: Dashboard de Ventas
+    type: dashboard
+    maturity: high
+    url: https://mi-bi.local/ventas
+    description: >
+      Este dashboard muestra KPIs de ventas por libro y por pedido para la tienda Libromanía.
+
+    depends_on:
+      - ref('fct_book_sales')
+      - ref('fct_orders')
+      - ref('dim_books')
+      - ref('dim_customers')
+
+    owner:
+      name: Edson Leon
+      email: edson.leon@bision.com
+
+  - name: reporte_clientes
+    label: Reporte de Clientes
+    type: dashboard
+    maturity: medium
+    url: https://mi-bi.local/clientes
+    description: >
+      Reporte que permite segmentar clientes por edad, género literario preferido y frecuencia de compra.
+
+    depends_on:
+      - ref('dim_customers')
+
+    owner:
+      name: Edson Leon
+      email: edson.leon@bision.com
+
+  - name: catalogo_libros_app
+    label: API Catálogo de Libros
+    type: application
+    maturity: medium
+    url: https://api.libromania.com/catalogo
+    description: >
+      Esta API es consumida por la aplicación móvil de Libromanía y permite a los usuarios consultar el catálogo actualizado de libros disponibles.
+
+    depends_on:
+      - ref('dim_books')
+
+    owner:
+      name: Equipo de Desarrollo Web
+      email: devs@libromania.com

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fct_book_sales
+    description: Ventas de libros por pedido
+    columns:
+      - name: book_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_books')
+              field: book_id
+
+      - name: total_quantity
+        tests:
+          - not_null
+
+      - name: total_paid
+        tests:
+          - not_null

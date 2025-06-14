@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Contiene las órdenes realizadas por los clientes, directamente desde la capa raw.
+    columns:
+      - name: order_id
+        description: Identificador único de la orden.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Identificador del cliente que hizo la orden.
+        tests:
+          - not_null
+
+      - name: order_date
+        description: Fecha en la que se realizó la orden.
