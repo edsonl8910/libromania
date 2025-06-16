@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_query_costs
+    description: >
+      Registro de consultas ejecutadas en Snowflake sobre la base DB_LIBROMANIA en los últimos 7 días,
+      incluyendo usuario, warehouse y créditos consumidos.
+    columns:
+      - name: query_id
+        description: ID único de la consulta
+        tests:
+          - not_null
+          - unique
+      - name: user_name
+        description: Usuario que ejecutó la consulta
+      - name: total_credits
+        description: Créditos totales consumidos por la consulta

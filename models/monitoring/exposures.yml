@@ -1,0 +1,16 @@
+exposures:
+  - name: dashboard_usage_by_user
+    label: Dashboard de Uso por Usuario
+    type: dashboard
+    maturity: high
+    url: https://placeholder.local/dashboard-uso-por-usuario
+    description: >
+      Dashboard interno que permite visualizar el número de consultas ejecutadas y créditos consumidos por usuario en los últimos 7 días.
+      Sirve para monitorear el uso de Snowflake y detectar posibles excesos o patrones de uso.
+
+    depends_on:
+      - ref('agg_usage_by_user')
+
+    owner:
+      name: Edson Leon
+      email: edson.leon@bision.com

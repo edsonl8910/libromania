@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: agg_usage_by_user
+    description: >
+      Uso agregado de Snowflake por usuario en los últimos 7 días, 
+      basado en créditos usados en servicios cloud de consultas ejecutadas.
+    columns:
+      - name: user_name
+        description: Nombre del usuario de Snowflake.
+        tests:
+          - not_null
+      - name: num_queries
+        description: Número de consultas ejecutadas por el usuario.
+      - name: credits_consumed
+        description: Créditos consumidos por el usuario en servicios cloud.
