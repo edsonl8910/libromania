@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="MARTS.erd">
+	<entities>
+		<data-source id="snowflake_jdbc-1977ad8ab25-3464dca8b6e15035">
+			<entity id="1" name="DIM_BOOKS" fq-name="LIBROMANIA_DB.DBT_DEV.DIM_BOOKS" order="0" x="564" y="52">
+				<path name="DBT_DEV"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="2" name="DIM_CUSTOMERS" fq-name="LIBROMANIA_DB.DBT_DEV.DIM_CUSTOMERS" order="1" x="757" y="40">
+				<path name="DBT_DEV"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="3" name="FCT_BOOK_SALES" fq-name="LIBROMANIA_DB.DBT_DEV.FCT_BOOK_SALES" order="2" x="446" y="317">
+				<path name="DBT_DEV"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="4" name="FCT_ORDERS" fq-name="LIBROMANIA_DB.DBT_DEV.FCT_ORDERS" order="3" x="726" y="317">
+				<path name="DBT_DEV"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="vfk_FCT_BOOK_SALES_DIM_BOOKS" type="vfk" pk-ref="1" fk-ref="3"/>
+		<relation name="vfk_FCT_ORDERS_DIM_CUSTOMERS" type="vfk" pk-ref="2" fk-ref="4"/>
+	</relations>
+</diagram>
