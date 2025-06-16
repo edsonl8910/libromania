@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="RAW.erd">
+	<entities>
+		<data-source id="snowflake_jdbc-1977ad8ab25-3464dca8b6e15035">
+			<entity id="1" name="STG_BOOKS" fq-name="LIBROMANIA_DB.DBT_DEV_STG.STG_BOOKS" order="0" x="265" y="40">
+				<path name="DBT_DEV_STG"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="2" name="STG_CUSTOMERS" fq-name="LIBROMANIA_DB.DBT_DEV_STG.STG_CUSTOMERS" order="1" x="476" y="256">
+				<path name="DBT_DEV_STG"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="3" name="STG_ORDER_ITEMS" fq-name="LIBROMANIA_DB.DBT_DEV_STG.STG_ORDER_ITEMS" order="2" x="40" y="52">
+				<path name="DBT_DEV_STG"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="4" name="STG_ORDERS" fq-name="LIBROMANIA_DB.DBT_DEV_STG.STG_ORDERS" order="3" x="265" y="268">
+				<path name="DBT_DEV_STG"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+			<entity id="5" name="STG_PAYMENTS" fq-name="LIBROMANIA_DB.DBT_DEV_STG.STG_PAYMENTS" order="4" x="40" y="256">
+				<path name="DBT_DEV_STG"/>
+				<path name="LIBROMANIA_DB"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="vfk_STG_ORDER_ITEMS_STG_BOOKS" type="vfk" pk-ref="1" fk-ref="3"/>
+		<relation name="vfk_STG_ORDERS_STG_CUSTOMERS" type="vfk" pk-ref="2" fk-ref="4"/>
+		<relation name="vfk_STG_ORDER_ITEMS_STG_ORDERS" type="vfk" pk-ref="4" fk-ref="3"/>
+		<relation name="vfk_STG_PAYMENTS_STG_ORDERS" type="vfk" pk-ref="4" fk-ref="5"/>
+	</relations>
+</diagram>

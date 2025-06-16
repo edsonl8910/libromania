@@ -1,0 +1,40 @@
+{
+	"folders": {},
+	"connections": {
+		"snowflake_jdbc-1977ad8ab25-3464dca8b6e15035": {
+			"provider": "snowflake",
+			"driver": "snowflake_jdbc",
+			"name": "LIBROMANIA_DB",
+			"save-password": true,
+			"configuration": {
+				"host": "https://cmzitiq-eac90604.snowflakecomputing.com",
+				"port": "443",
+				"database": "LIBROMANIA_DB",
+				"url": "jdbc:snowflake://https://cmzitiq-eac90604.snowflakecomputing.com:443/?db\u003dLIBROMANIA_DB",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-schema@": ""
+				},
+				"auth-model": "snowflake_snowflake"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
